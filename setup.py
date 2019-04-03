@@ -50,6 +50,6 @@ setup(
     packages=find_packages(include=['tjpy_git_util', 'tjpy_git_util.*']),
     test_suite='tests',
     url='https://github.com/thomasjahoda/tjpy_git_util',
-    version='0.1.0',
+    version='0.1.1',
     zip_safe=False,
 )
