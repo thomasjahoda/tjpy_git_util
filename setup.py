@@ -4,7 +4,10 @@ from setuptools import find_packages, setup
 readme = Path('README.rst').read_text(encoding="utf-8")
 history = Path('docs/history.rst').read_text(encoding="utf-8")
 
-runtime_requirements = []
+runtime_requirements = [
+    'tjpy_subprocess_util',
+    'backoff'
+]
 development_requirements = [
     'pip>=19.0.2',
     'bumpversion>=0.5.3',
