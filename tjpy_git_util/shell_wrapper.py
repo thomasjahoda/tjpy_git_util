@@ -11,9 +11,17 @@ def git_push(repository: Path):
                                 logging_level="INFO")
 
 
+def git_init(repository: Path):
+    SubProcessExecution.execute("git init".split(), working_directory=repository)
+
+
 def git_add(repository: Path,
             path_to_stage_for_commit: Optional[Path]):
     SubProcessExecution.execute(["git", "add", str(path_to_stage_for_commit)], working_directory=repository)
+
+
+def git_add_everything(repository: Path):
+    SubProcessExecution.execute("git add -A .".split(), working_directory=repository)
 
 
 def git_commit_staged_changes(repository: Path, message: str):
