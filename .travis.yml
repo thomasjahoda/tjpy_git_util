@@ -21,7 +21,7 @@ deploy:
     distributions: sdist bdist_wheel
     user: thomasjahoda
     password:
-        secure: PLEASE_REPLACE_ME
+        secure: JqbHEZMaOJHt5v/bX3QuABb0m4mcJ1lTy2q0bd+XFyygObzHPp0SaMaT3sLVSaLmkJuyvK8zbqdHFVsGFtwtX/V09/tVzvcsfkqbdFZHXOvIOK+hcZAgi4lyZ2U5gwyHHzWiOx28YMNqReDd0+NduyTkbZ0sigPzDpKpgCoVIaxlZtbEhhgMprepwjSyO5CTNyf+Jp7BjRLYFbg3MqHKhOJzBU3565MbmfZ3wlYvWQ5PDuixSeLK3/T6CtT5RYM7pLTQoUEmQKVHczCWaQt6pGuudXE0XlPTTL76kMqbO4Yhgen7V6gDxwovwRzJHfv/o/iyZHLCbEv/t2X2tuJimJR9gzImrKuAikU4Zj3QXQcNd64yIS0bKqwFLT/E9zHSaurQroS+rEwvOvpSbaz7LT2urNjODySAYnI1ZEW3B1JxSWEjKBaQcibnUxbxVi+VEjbR7idneptepuMCi0kYV86/rRHtnX/NvwiTeimDVwaHnZZrNU1dbtcRn7aG7BrYC4xE92/wQ3y9JYZQaWRzWsDEuuAZ/bJ1dUemHXZOK5S4UfVxbXkaTyT/dXtECdxTBZ6t87Th0kAcqFPE7WusPKLGs6MEmt22l23Kt0MwAUBTAbiZbPgozZuU5Ia4whk3xdkMInkrbqRerdAWrQynodE75xgDtMS45zSt/NXbq6U=
     on:
         tags: true
         repo: thomasjahoda/tjpy_git_util
