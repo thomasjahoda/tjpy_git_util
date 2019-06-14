@@ -14,8 +14,8 @@ Personal Git Utilities
   :target: https://tjpy-git-util.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
 
-.. image:: https://codecov.io/gh/codecov/example-python/branch/master/graph/badge.svg
-  :target: https://codecov.io/gh/codecov/example-python
+.. image:: https://codecov.io/gh/thomasjahoda/tjpy_git_util/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/thomasjahoda/tjpy_git_util
   :alt: Code Coverage
 
 
