@@ -53,23 +53,23 @@ clean-test: ## remove test and coverage artifacts
 clean-mypy: ## remove mypy cache
 	rm -fr .mypy_cache/
 
-lint: ## check style with flake8
+flake8: ## check style with flake8 (lint)
 	flake8 tjpy_git_util tests --max-line-length=120
 
-type-check: ## run tests quickly with the default Python
+mypy: ## check types with mypy
 	mypy tjpy_git_util tests
 
-test: ## run tests quickly with the default Python
-	py.test
+test: ## run all tests with the current python env
+	pytest
 
-test-all: ## run tests on every Python version with tox
+tox: ## run tests and other checks on every Python version with tox
 	tox
 
-coverage: ## check code coverage quickly with the default Python
-	coverage run --source tjpy_git_util -m pytest
+coverage: ## check code coverage with the current python env
+    pytest --cov=tjpy_git_util --cov-report=xml:.dev/coverage/coverage.xml
 	coverage report -m
-	coverage html
-	$(BROWSER) htmlcov/index.html
+	coverage html --directory .dev/coverage/htmlcov
+	$(BROWSER) .dev/coverage/htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/tjpy_git_util.rst
@@ -85,16 +85,16 @@ servedocs: docs ## compile the docs watching for changes
 release: dist ## package and upload a release
 	twine upload dist/*
 
-dist: clean ## builds source and wheel package
+dist: clean-build ## builds source and wheel package
 	python setup.py sdist
 	python setup.py bdist_wheel
 	ls -l dist
 
-install: clean ## install the package to the active Python's site-packages (production-mode)
+install: ## install the package to the active Python's site-packages (production-mode)
 	pip install --upgrade .
 
-install-dev: clean ## install the package for development
+install-dev: ## install the package for development
 	pip install -e .[dev]
 
-install-dev-upgrade: clean ## install-dev + upgrade any dependencies if possible
+install-dev-upgrade: ## install-dev + upgrade any dependencies if possible
 	pip install --upgrade -e .[dev]
