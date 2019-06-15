@@ -8,7 +8,7 @@ Personal Git Utilities
 
 .. image:: https://travis-ci.org/thomasjahoda/tjpy_git_util.svg?branch=master
   :target: https://travis-ci.org/thomasjahoda/tjpy_git_util
-  :CI Status
+  :alt: CI Status
 
 .. image:: https://readthedocs.org/projects/tjpy-git-util/badge/?version=latest
   :target: https://tjpy-git-util.readthedocs.io/en/latest/?badge=latest
